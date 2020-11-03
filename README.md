@@ -22,3 +22,4 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+### https://github.com/lhz960904/movie-trailer/blob/master/src/assets/js/searchCache.ts

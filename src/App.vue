@@ -1,18 +1,26 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div>
+123
+  </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
-
-export default defineComponent({
-  name: 'App',
-  components: {
-    HelloWorld
+// import { ref } from "vue";
+import useUrlAxios from "./hooks/useUrlAxios";
+const app = {
+  name: "App",
+  setup(){
+     const { result, loading, loaded } = useUrlAxios(
+       "https://dog.ceo/api/breeds/image/random"
+     )
+     return {
+       result, 
+       loading, 
+       loaded
+     }
   }
-});
+};
+export default app
 </script>
 
 <style>
